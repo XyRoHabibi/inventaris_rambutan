@@ -10,7 +10,7 @@ interface UserData {
 
 const User: React.FC<{ userData: UserData }> = ({ userData }) => {
   return (
-    <div className="flex items-center justify-between px-4 py-3 bg-white border-b">
+    <div className="rounded-t-xl rounded-b-none flex items-center justify-between px-4 py-3 bg-white border-b">
       <div className="flex items-center space-x-4">
         <div className="w-8 h-8 bg-gray-400 rounded-full"></div>
         <div>

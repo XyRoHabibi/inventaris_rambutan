@@ -5,16 +5,6 @@ import Logo from "@/assets/Pict Inventory.png";
 import Image from "next/image";
 
 function Login() {
-  const router = useRouter();
-
-  const handleLogin = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    {
-      router.push("/all-users");
-    }
-  };
-
   return (
     <>
       <div className="flex justify-center items-center ">
@@ -28,7 +18,7 @@ function Login() {
           </div>
 
           <div className="flex flex-col justify-center p-10">
-            <form onSubmit={handleLogin}>
+            <form action="/all-users">
               <h1 className="text-gray-800 text-center mb-6 font-bold text-3xl">
                 Login
               </h1>
@@ -43,16 +33,13 @@ function Login() {
                 placeholder="Password"
               />
               <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="flex items-center bg-primary bg-600 hover:bg-blue-500 text-white font-semibold rounded-full py-2 px-24 w-auto h-9 mb-4"
-                >
+                <button className="flex items-center bg-primary bg-600 hover:bg-blue-500 text-white font-semibold rounded-full py-2 px-24 w-auto h-9 mb-4">
                   Login
                 </button>
               </div>
               <p className="text-center text-gray-500">
                 New user?{" "}
-                <a href="#" className="text-gray-600 hover:underline">
+                <a href="#" className="font-semibold text-gray-600 underline">
                   Register
                 </a>
               </p>

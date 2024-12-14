@@ -37,7 +37,7 @@ const userData = [
 
 const AllUsers: React.FC = () => {
   return (
-    <div className="bg-white rounded-lg shadow-lg">
+    <div className="bg-white rounded-lg shadow-lg ">
       {userData.map((user, index) => (
         <User key={index} userData={user} />
       ))}

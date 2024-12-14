@@ -1,5 +1,5 @@
 "use client";
-
+import { Search } from "lucide-react";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,12 +14,14 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image src={Logo} alt="Logo" className="h-10 w-auto rounded-lg" />
-              <span className="ml-2 text-xl font-bold text-gray-800"></span>
             </Link>
           </div>
 
-          <div className=" md:flex items-center ">
+          <div className=" md:flex items-center w-4/12 ">
             <Image src={Line} alt="Line" />
+            <div className="pl-6">
+              <Search color="#ffffff" size={20} />
+            </div>
           </div>
         </div>
       </div>
