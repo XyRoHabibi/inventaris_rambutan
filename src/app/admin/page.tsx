@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Header from "../components/Header";
 import AllUsers from "../components/AllUsers";
@@ -32,14 +33,17 @@ function UserPage() {
           <th className="transform hover:scale-110 transition-transform ease-in duration-200 hover:text-primary">
             <a href="inventory">All</a>
           </th>
-          <th className="px-10 transform hover:scale-110 transition-transform ease-in duration-200 hover:text-primary ">
-            <a href="admin">Warehouse</a>
+          <th className="relative px-10 transform hover:scale-110 transition-transform ease-in duration-200 hover:text-primary">
+            <a className="relative inline-block pb-2" href="admin">
+              Warehouse
+              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[24px] border-b-[3px] border-neutral-950 rounded-sm"></span>
+            </a>
           </th>
 
           <div className="justify-self-end">
             <button className="mb-4 border border-blue-500 text-primary px-4 mr-6">
               {" "}
-              <Link href="/add-account">Add</Link>
+              <Link href="add-product">Add</Link>
             </button>
           </div>
           <div className="bg-white shadow-md rounded-lg overflow-hidden">
@@ -49,9 +53,9 @@ function UserPage() {
                   <th className=""></th>
                   <th className="">Product Name</th>
                   <th className="px-4 py-2">Series No.</th>
-                  <th className="px-4 py-2">Items</th>
-                  <th className="px-4 py-2">Purchase Date</th>
-                  <th className="px-4 py-2">Unit Price</th>
+                  <th className="px-4 py-2">Category</th>
+                  <th className="px-4 py-2">Condition</th>
+                  <th className="px-4 py-2">Storage Location</th>
                 </tr>
               </thead>
               <tbody className="divide-y">
